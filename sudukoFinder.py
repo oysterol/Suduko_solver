@@ -25,7 +25,8 @@ def find_suduko(image, debug=False):
             puzzleCnt=approx
             break
         if puzzleCnt is None:
-            raise Exception(("Could nt find suduko outline,Debugg?"))
+            #raise Exception(("Could nt find suduko outline,Debugg?"))
+            return None
     if debug:
         output=image.copy()
         cv2.drawContours(output,[puzzleCnt],-1,(0,255,0),2)
